@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'com.victoryforphil.vcpathfinder.Main'
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        } 
+
+    }
+
+    test {
+        java {
+            srcDirs = ['test']
+        } 
+
+    }
+}
+
+test {
+  // enable JUnit Platform (a.k.a. JUnit 5) support
+  useJUnitPlatform()
+}
+
+jar {
+    baseName = 'vc-client'
+    version =  '0.0.3'
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+       dirs 'libs'
+    }
+}
+ 
+dependencies {
+    compile name: 'vc-client-0.0.3'
+    compile name: 'Pathfinder-Java'
+    implementation 'org.jmdns:jmdns:3.5.5'
+
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    )
+    testRuntimeOnly(
+            'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+    )
+}
