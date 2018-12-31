@@ -20,7 +20,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'build distDocker'
+    tasks: 'build dockerBuildImage'
 - task: CopyFiles@2
   inputs:
     sourceFolder: 'build/distributions'
