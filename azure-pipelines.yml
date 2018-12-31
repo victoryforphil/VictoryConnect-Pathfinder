@@ -30,3 +30,4 @@ steps:
   inputs:
     artifactName: 'distributions'
     pathtoPublish: $(Build.ArtifactStagingDirectory)/distributions
+- script: docker images
