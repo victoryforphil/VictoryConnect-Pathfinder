@@ -1,24 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'application'
-apply plugin: 'com.bmuschko.docker-java-application'
 mainClassName = 'com.victoryforphil.vcpathfinder.Main'
-group = 'victoryconnect'
-sourceCompatibility = 1.7
-buildscript {
-    repositories {
-         jcenter()
-    }
-    dependencies {
-       classpath 'com.bmuschko:gradle-docker-plugin:3.0.3'
-    }
-}
-
-docker {
-    javaApplication {
-        baseImage = 'dockerfile/java:openjdk-7-jre'
-        tag = "vc-pathfinder:0.0.1"
-    }
-}
 sourceSets {
     main {
         java {
