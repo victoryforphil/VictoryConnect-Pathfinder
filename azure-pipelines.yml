@@ -21,3 +21,12 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build distDocker'
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: 'build/distributions'
+    contents: '**/*'
+    targetFolder: $(Build.ArtifactStagingDirectory)/distributions
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: 'distributions'
+    pathtoPublish: $(Build.ArtifactStagingDirectory)/distributions
