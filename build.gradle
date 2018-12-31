@@ -23,8 +23,8 @@ test {
 }
 
 jar {
-    baseName = 'vc-client'
-    version =  '0.0.3'
+    baseName = 'vc-pathfinder'
+    version =  '0.0.1'
 }
 
 repositories {
@@ -37,6 +37,7 @@ repositories {
 dependencies {
     compile name: 'vc-client-0.0.3'
     compile name: 'Pathfinder-Java'
+
     implementation 'org.jmdns:jmdns:3.5.5'
 
     testImplementation(

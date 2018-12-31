@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/vc-client-0.0.3.jar:$APP_HOME/lib/vc-client-0.0.3.jar:$APP_HOME/lib/Pathfinder-Java.jar:$APP_HOME/lib/jmdns-3.5.5.jar:$APP_HOME/lib/slf4j-api-1.7.25.jar
+CLASSPATH=$APP_HOME/lib/vc-pathfinder-0.0.1.jar:$APP_HOME/lib/vc-client-0.0.3.jar:$APP_HOME/lib/Pathfinder-Java.jar:$APP_HOME/lib/jmdns-3.5.5.jar:$APP_HOME/lib/slf4j-api-1.7.25.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\vc-client-0.0.3.jar;%APP_HOME%\lib\vc-client-0.0.3.jar;%APP_HOME%\lib\Pathfinder-Java.jar;%APP_HOME%\lib\jmdns-3.5.5.jar;%APP_HOME%\lib\slf4j-api-1.7.25.jar
+set CLASSPATH=%APP_HOME%\lib\vc-pathfinder-0.0.1.jar;%APP_HOME%\lib\vc-client-0.0.3.jar;%APP_HOME%\lib\Pathfinder-Java.jar;%APP_HOME%\lib\jmdns-3.5.5.jar;%APP_HOME%\lib\slf4j-api-1.7.25.jar
 
 @rem Execute VictoryConnect-Pathfinder
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %VICTORY_CONNECT_PATHFINDER_OPTS%  -classpath "%CLASSPATH%" com.victoryforphil.vcpathfinder.Main %CMD_LINE_ARGS%
