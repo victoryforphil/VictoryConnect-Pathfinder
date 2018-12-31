@@ -1,6 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'docker'
 mainClassName = 'com.victoryforphil.vcpathfinder.Main'
+
+buildscript {
+    repositories { mavenCentral() }
+    dependencies {
+        classpath 'se.transmode.gradle:gradle-docker:1.1'
+    }
+
+}
 sourceSets {
     main {
         java {
